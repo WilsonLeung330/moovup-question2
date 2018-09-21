@@ -1,0 +1,67 @@
+agm-map {
+  height: 500px;
+  width: 100%;
+}
+
+/* Column container */
+.row { 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 20%; /* Set the width of the sidebar */
+  padding: 20px; /* Some padding */
+}
+
+/* Main column */
+.main { 
+  flex: 80%; /* Set the width of the main content */
+  padding: 20px; /* Some padding */
+}
+
+.centered {
+  position: relative;
+  top: 50px;
+  text-align: center;
+}
+
+.centered img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+.friends {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.friends li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  text-align:center;
+}
+.friends li.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+.friends li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+

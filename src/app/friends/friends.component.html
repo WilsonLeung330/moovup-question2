@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="side">
+        <h1>All Friends</h1>
+        <ul class="friends">
+          <li *ngFor="let friend of friends$"
+          [class.selected]="friend === selectedfriend"
+          (click)="onSelect(friend)">
+          {{friend.name}}
+          </li>
+        </ul>
+      </div>
+      
+      
+      <div class="main"> 
+        <div *ngIf="selectedFriend">
+          <agm-map [latitude]="selectedFriend.location.latitude" [longitude]="selectedFriend.location.longitude" [zoom]=12>
+            <agm-marker [latitude]="selectedFriend.location.latitude" [longitude]="selectedFriend.location.longitude"></agm-marker>
+          </agm-map>
+      
+          <div class="centered">
+          <img [src]="selectedFriend.picture" alt="pic" />
+          <h2>{{selectedFriend.name}}</h2>
+          <h2><span>Email: </span>{{selectedFriend.email}}</h2>
+          </div>
+        </div>
+      </div>
+</div>
